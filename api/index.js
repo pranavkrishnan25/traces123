@@ -20,7 +20,12 @@ app.use(express.json());
 const jwt = require('jsonwebtoken');
 
 mongoose
-  .connect('mongodb+srv://sujan:sujan@cluster0.8gyy8sg.mongodb.net/')
+  .connect(
+    'mongodb+srv://pranav12:checking123@cluster0.zfvmo.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0',
+  )
+
+  // .connect('mongodb+srv://sujan:sujan@cluster0.8gyy8sg.mongodb.net/')
+  //mongodb+srv://pranav12:checking123@cluster0.zfvmo.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
   .then(() => {
     console.log('Connected to MongoDB');
   })

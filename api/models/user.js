@@ -5,39 +5,39 @@ const Schema = mongoose.Schema;
 const userSchema = new Schema({
   firstName: {
     type: String,
-    required: true,
+    required: false,
   },
   lastName: {
     type: String,
   },
   email: {
     type: String,
-    required: true,
-    unique: true,
+    required: false,
+    unique: false,
   },
   password: {
     type: String,
-    required: true,
+    required: false,
   },
   gender: {
     type: String,
-    required: true,
+    required: false,
   },
   dateOfBirth: {
     type: String,
-    required: true,
+    required: false,
   },
   type: {
     type: String,
-    required: true,
+    required: false,
   },
   location: {
     type: String,
-    required: true,
+    required: false,
   },
   hometown: {
     type: String,
-    required: true,
+    required: false,
   },
   datingPreferences: [
     {
@@ -46,7 +46,7 @@ const userSchema = new Schema({
   ],
   lookingFor: {
     type: String,
-    required: true,
+    required: false,
   },
   imageUrls: [
     {
@@ -57,11 +57,11 @@ const userSchema = new Schema({
     {
       question: {
         type: String,
-        required: true,
+        required: false,
       },
       answer: {
         type: String,
-        required: true,
+        required: false,
       },
     },
   ],
@@ -91,11 +91,11 @@ const userSchema = new Schema({
       userId: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
-        required: true,
+        required: false,
       },
       image: {
         type: String,
-        required: true,
+        required: false,
       },
       comment: {
         type: String,

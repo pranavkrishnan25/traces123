@@ -26,7 +26,7 @@ const LookingFor = () => {
       }, []);
     
       const handleNext = () => {
-        if (lookingFor.trim() !== '') {
+        if (Array.isArray(lookingFor) && lookingFor.length > 0) {
           // Save the current progress data including the name
           saveRegistrationProgress('LookingFor', {lookingFor});
         }
